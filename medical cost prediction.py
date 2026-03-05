@@ -56,9 +56,9 @@ rf.fit(X_train, y_train)
 y_pred_rf = rf.predict(X_test)
 
 print("Random Forest Performance:")
-print("MAE:", mean_absolute_error(y_test, y_pred_rf))
-print("RMSE:", np.sqrt(mean_squared_error(y_test, y_pred_rf)))
-print("R2 Score:", r2_score(y_test, y_pred_rf))
+print("MAE:", mean_absolute_error(y_test, y_pred_lr))
+print("RMSE:", np.sqrt(mean_squared_error(y_test, y_pred_lr)))
+print("R2 Score:", r2_score(y_test, y_pred_lr))
 
 # 📈 Model Comparison
 results = pd.DataFrame({
@@ -110,4 +110,5 @@ input_data = pd.DataFrame({
 prediction = model.predict(input_data)[0]
 st.write("Predicted Insurance Cost: $", round(prediction, 2))
 """
+
 
