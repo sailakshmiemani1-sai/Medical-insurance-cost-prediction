@@ -63,9 +63,9 @@ print("R2 Score:", r2_score(y_test, y_pred_rf))
 # 📈 Model Comparison
 results = pd.DataFrame({
     "Model": ["Linear Regression", "Random Forest"],
-    "MAE": [mean_absolute_error(y_test, y_pred_lr), mean_absolute_error(y_test, y_pred_rf)],
-    "RMSE": [np.sqrt(mean_squared_error(y_test, y_pred_lr)), np.sqrt(mean_squared_error(y_test, y_pred_rf))],
-    "R2 Score": [r2_score(y_test, y_pred_lr), r2_score(y_test, y_pred_rf)]
+    "MAE": [mean_absolute_error(y_test, y_pred_lr), mean_absolute_error(y_test, y_pred_lr)],
+    "RMSE": [np.sqrt(mean_squared_error(y_test, y_pred_lr)), np.sqrt(mean_squared_error(y_test, y_pred_lr))],
+    "R2 Score": [r2_score(y_test, y_pred_lr), r2_score(y_test, y_pred_lr)]
 })
 print(results)
 
@@ -110,3 +110,4 @@ input_data = pd.DataFrame({
 prediction = model.predict(input_data)[0]
 st.write("Predicted Insurance Cost: $", round(prediction, 2))
 """
+
